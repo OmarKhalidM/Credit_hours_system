@@ -1,0 +1,143 @@
+JFDML JFormDesigner: "8.0.3.0.246" Java: "17.0.6" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"visible": true
+			"maximumSize": new java.awt.Dimension( 1920, 1080 )
+			"minimumSize": new java.awt.Dimension( 900, 600 )
+			"title": "Welcome"
+			"defaultCloseOperation": 3
+			"preferredSize": new java.awt.Dimension( 100, 30 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "main"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+					name: "pane"
+					"preferredSize": new java.awt.Dimension( 250, 80 )
+					"minimumSize": new java.awt.Dimension( 150, 100 )
+					"alignmentX": 0.0f
+					"alignmentY": 0.0f
+					"componentOrientation": sfield java.awt.ComponentOrientation RIGHT_TO_LEFT
+					"font": new java.awt.Font( "Tajawal", 0, 12 )
+					"border": &EmptyBorder0 new javax.swing.border.EmptyBorder( 5, 5, 5, 5 )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "newSubject"
+						"preferredSize": new java.awt.Dimension( 200, 30 )
+						"minimumSize": new java.awt.Dimension( 200, 30 )
+						"maximumSize": new java.awt.Dimension( 150, 30 )
+						"horizontalTextPosition": 0
+						"font": new java.awt.Font( "Tajawal", 1, 16 )
+						"action": new FormReference( "newSubjectShow" )
+						"text": "Import Excel File"
+						"background": new java.awt.Color( 25, 133, 161, 255 )
+						"foreground": new java.awt.Color( 220, 220, 221, 255 )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "West"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel2"
+						"minimumSize": new java.awt.Dimension( 350, 100 )
+						"preferredSize": new java.awt.Dimension( 200, 100 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "Subject"
+							"maximumSize": new java.awt.Dimension( 100, 30 )
+							"minimumSize": new java.awt.Dimension( 100, 30 )
+							"font": new java.awt.Font( "Tajawal", 0, 16 )
+							"horizontalAlignment": 4
+							"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "East"
+						} )
+						add( new FormComponent( "javax.swing.JComboBox" ) {
+							name: "subjectsSelect"
+							"font": new java.awt.Font( "Tajawal", 0, 16 )
+							"border": new javax.swing.border.EmptyBorder( 0, 10, 0, 0 )
+							"background": new java.awt.Color( 25, 133, 161, 255 )
+							"foreground": new java.awt.Color( 220, 220, 221, 255 )
+							"action": new FormReference( "selected" )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "Center"
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "status"
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "Center"
+					} )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+						name: "panel3"
+						"preferredSize": new java.awt.Dimension( 46, 40 )
+						"minimumSize": new java.awt.Dimension( 46, 40 )
+						add( new FormComponent( "javax.swing.JButton" ) {
+							name: "button1"
+							"border": new javax.swing.border.EmptyBorder( 10, 10, 10, 10 )
+							"action": new FormReference( "saveData" )
+							"background": new java.awt.Color( 25, 133, 161, 255 )
+							"font": new java.awt.Font( "sansserif", 0, 16 )
+							"foreground": new java.awt.Color( 220, 220, 221, 255 )
+						}, new FormLayoutConstraints( class java.lang.String ) {
+							"value": "East"
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "South"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "First"
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "scrollPane1"
+					"preferredSize": new java.awt.Dimension( 452, 200 )
+					"border": new javax.swing.border.EmptyBorder( 10, 10, 10, 10 )
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "dataTable"
+						"font": new java.awt.Font( "Tajawal", 0, 18 )
+						"rowHeight": 24
+						"border": #EmptyBorder0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 550, 360 )
+		} )
+		add( new FormNonVisual( "javax.swing.AbstractAction" ) {
+			name: "newSubjectShow"
+			"$action.Name": "newSubjectShow"
+			"$action.ActionCommandKey": "newSubjectShow"
+			auxiliary() {
+				"JavaCodeGenerator.className": "NewSubjectShow"
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 10, 370 )
+		} )
+		add( new FormNonVisual( "javax.swing.AbstractAction" ) {
+			name: "selected"
+			"$action.Name": "selected"
+			auxiliary() {
+				"JavaCodeGenerator.className": "selected"
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 430 )
+		} )
+		add( new FormNonVisual( "javax.swing.AbstractAction" ) {
+			name: "saveData"
+			"$action.Name": "saveData"
+			auxiliary() {
+				"JavaCodeGenerator.className": "saveData"
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 490 )
+		} )
+	}
+}
