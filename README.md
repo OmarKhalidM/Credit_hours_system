@@ -1,1 +1,1 @@
-# Credit_hours_system
+# Credit_Hours_System
